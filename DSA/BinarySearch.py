@@ -22,7 +22,7 @@ def verif(index):
     else:
         print("Value found at index", index)
 
-a = [5, 6, 7, 8, 9, 10]
-b = 5
+# a = [5, 6, 7, 8, 9, 10]
+# b = 5
 
-verif(binary_search(a, b))  
+# verif(binary_search(a, b))  
