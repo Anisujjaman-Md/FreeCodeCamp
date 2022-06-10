@@ -13,7 +13,7 @@ def verif(index):
     else:
         print("Value found at index", index)
 
-a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+a = [50, 80, 11 ,6, 7, 5, 8, 9, 10]
 b = 5
 
-verif(linear_serch(a, b))
+verif(linear_serch(a, b))  
