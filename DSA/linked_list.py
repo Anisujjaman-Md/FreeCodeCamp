@@ -105,7 +105,7 @@ class LinkedList:
             while count < index:
                 current = current.next_node
                 count += 1
-                
+
         return current
 
          
@@ -129,19 +129,3 @@ class LinkedList:
             current = current.next_node
 
         return "->".join(nodes)
-            
-l = LinkedList()
-l.add(1)
-l.add(2)
-l.add(3)
-l.add(4)
-l.add(5)
-
-print(l)
-l.inseart(6, 4)
-print(l)
-print(l.size())
-l.remove(3)
-print(l)
-print(l.search(3))
-print(l.size())
