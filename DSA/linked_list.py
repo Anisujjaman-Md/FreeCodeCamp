@@ -95,6 +95,19 @@ class LinkedList:
                 current = current.next_node
 
         return current
+    
+    def node_at_index(self, index):
+        if index == 0:
+            return self.head
+        else:
+            current = self.head
+            count = 0
+            while count < index:
+                current = current.next_node
+                count += 1
+                
+        return current
+
          
 
     def __str__(self):     #sourcery skip: replace-interpolation-with-fstring
