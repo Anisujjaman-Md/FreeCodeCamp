@@ -50,5 +50,4 @@ item2 = Item("HeadPhone", 100,  10)
 # for instance in Item.all:
 #    print(instance.name, instance.price, instance.quantity)
 
-# print(Item.all)
-print(item1.all)
+print(Item.all)
