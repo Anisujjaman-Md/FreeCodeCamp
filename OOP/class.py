@@ -35,7 +35,15 @@ class Item:
                 name = item.get('name'),
                 price = float(item.get("price")),
                 quantity = int(item.get("quantity")),
-            )    
+            )   #Item.instantiate_from_csv() is the class method
+
+    @staticmethod
+    def is_integer(number):
+        try:
+            int(number)
+            return True
+        except ValueError:
+            return False
 
     def __repr__(self):
         return f"Item('{self.name}', {self.price} {self.quantity})"
