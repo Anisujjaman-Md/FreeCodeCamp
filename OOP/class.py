@@ -39,14 +39,19 @@ class Item:
 
     @staticmethod
     def is_integer(number):
-        try:
-            int(number)
+        #We will count the float that are point zero
+        if isinstance(number, float):
+            return number.is_integer()
+        elif isinstance(number, int):
             return True
-        except ValueError:
+        else:
             return False
+        
+                
 
     def __repr__(self):
         return f"Item('{self.name}', {self.price} {self.quantity})"
 
 Item.instantiate_from_csv()
-print(Item.all)
+
+print(Item.is_integer(1.0))
