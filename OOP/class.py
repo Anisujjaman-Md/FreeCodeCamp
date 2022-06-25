@@ -47,7 +47,6 @@ class Item:
         else:
             return False
         
-
     def __repr__(self):
         return f"Item('{self.name}', {self.price} {self.quantity})"
 
