@@ -26,7 +26,7 @@ class Item:
     #Class Method
     @classmethod
     def instantiate_from_csv(cls):
-        with open("item.csv", "r") as f:
+        with open('D:\Practice\FreeCodeCamp\OOP\items.csv', 'r') as f:
             reader = csv.DictReader(f)
             items = list(reader)
 
@@ -47,7 +47,7 @@ class Item:
         else:
             return False
         
-    def __repr__(self):
+    def __repr__(self):       
         return f"Item('{self.name}', {self.price} {self.quantity})"
 
 Item.instantiate_from_csv()
