@@ -52,4 +52,4 @@ class Item:
 
 Item.instantiate_from_csv()
 
-print(Item.is_integer(1.0))
+# print(Item.is_integer(1.0))
