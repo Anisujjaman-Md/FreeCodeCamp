@@ -50,6 +50,17 @@ class Item:
     def __repr__(self):       
         return f"Item('{self.name}', {self.price} {self.quantity})"
 
-Item.instantiate_from_csv()
+class Phone(Item):
+    def __init__(self, name : str, price :float, quantity : int = 0, broken_phone : int = 0):
+        super().__init__(name, price, quantity)
 
-# print(Item.is_integer(1.0))
+        assert broken_phone >= 0, f"Broken Phone {broken_phone} cannot be negative or zero"
+
+        self.broken_phone = broken_phone
+
+# Item.instantiate_from_csv()
+
+phone1 = Phone("Iphone", 5000, 1, 1)
+phone2 = Phone("Android", 1000, 1, 1)
+
+print(phone1.calculate_total_price())
