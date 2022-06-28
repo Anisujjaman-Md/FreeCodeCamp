@@ -63,6 +63,6 @@ class Phone(Item):
 phone1 = Phone("Iphone", 5000, 1, 1)
 phone2 = Phone("Android", 1000, 1, 1)
 phone3 = Phone("Windows", 2000, 1, 1)
-
+phone4 = Phone("Blackberry", 3000, 1, 1)
 
 print(phone1.calculate_total_price())
