@@ -11,12 +11,23 @@ class Item:
         assert quantity >= 0, f"Quantity {quantity} cannot be negative"
 
         #Assing to self object
-        self.name = name
+        self.__name = name
         self.price = price
         self.quantity = quantity
 
         #Add to the all list
         self.all.append(self)
+
+    @property
+    #Getter/ Property Decorator = Read-Only Atribiutes
+    def name(self):
+        return self.__name
+
+    @name.setter
+    #Setter/ Property Decorator = Write-Only Attributes
+    def name(self, value):
+        self.__name = value
+
 
     def calculate_total_price(self):
         return self.price * self.quantity
@@ -50,3 +61,4 @@ class Item:
         
     def __repr__(self):       
         return f"{self.__class__.__name__}('{self.name}', {self.price} {self.quantity})"
+ 
