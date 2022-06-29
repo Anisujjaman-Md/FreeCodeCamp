@@ -12,8 +12,8 @@ class Item:
 
         #Assing to self object
         self.__name = name
-        self.price = price
-        self.quantity = quantity
+        self.__price = price
+        self.__quantity = quantity
 
         #Add to the all list
         self.all.append(self)
@@ -28,13 +28,19 @@ class Item:
     def name(self, value):
         self.__name = value
 
+    @property
+    def price(self):
+        return self.__price
 
     def calculate_total_price(self):
-        return self.price * self.quantity
+        return self.__price * self.__quantity
 
     def apply_discount(self):
-        self.price = self.price * self.pay_rate #Item.pay_rate is the class attribute
+        self.__price = self.__price * self.pay_rate #Item.pay_rate is the class attribute
     
+    def apply_increment(self, increment):
+        self.__price = self.__price + self.__price * increment
+
     #Class Method
     @classmethod
     def instantiate_from_csv(cls):
@@ -58,7 +64,20 @@ class Item:
             return True
         else:
             return False
-        
+
+
+    #Example of Private Method/Abstraction
+    def __connecting_to_smtp(self, smtp_server):
+        pass
+    def __mail_body(self):
+        f"""
+            Dear x,
+            Today Sales of {self.name} is {self.calculate_total_price()}
+        """
+    def __send_mail(self):
+        self.connecting_to_smtp('')
+        self.mailbody()
+
     def __repr__(self):       
-        return f"{self.__class__.__name__}('{self.name}', {self.price} {self.quantity})"
+        return f"{self.__class__.__name__}('{self.name}', {self.__price} {self.__quantity})"
  

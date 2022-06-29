@@ -1,6 +1,7 @@
 from item import Item
 
 class Phone(Item):
+    pay_rate = 0.6
     def __init__(self, name : str, price :float, quantity : int = 0, broken_phone : int = 0):
         super().__init__(name, price, quantity)
         #Run validtion on the input
